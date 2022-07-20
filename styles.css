@@ -63,7 +63,22 @@ h1 {
     align-items: center;
     gap: 30px;
     width: 200px;
-    background-color: white;
+    background-color: lightseagreen;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgb(0, 50, 50), 
+                2px 2px 2px rgb(0, 55, 55),
+                3px 3px 2px rgb(0, 60, 60), 
+                4px 4px 2px rgb(0, 65, 65),
+                5px 5px 2px rgb(0, 70, 70), 
+                6px 6px 2px rgb(0, 75, 75),
+                7px 7px 2px rgb(0, 80, 80), 
+                8px 8px 2px rgb(0, 85, 85);
+}
+
+.size-value {
+    margin-top: -25px;
 }
 
 /* Content - Etch Grid */
@@ -89,8 +104,10 @@ h1 {
 .footer > p {
     color: darksalmon;
     font-style: italic;
+    letter-spacing: 0.03em;
 }
 
 .git-link {
     color: salmon;
+    letter-spacing: 0.03em;
 }
