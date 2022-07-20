@@ -19,6 +19,8 @@ html {
 
 body {
     margin-bottom: 100px;
+    background: rgb(4,0,70);
+    background: linear-gradient(139deg, rgba(4,0,70,1) 0%, rgba(26,4,45,1) 49%, rgba(45,0,80,1) 100%);
 }
 
 /* Header */
@@ -39,7 +41,7 @@ h1 {
     color: transparent;
     background-size: 10%;
     background-color: hotpink;
-    filter: drop-shadow(7px 3px 3px purple);
+    filter: drop-shadow(7px 3px 3px mediumblue);
 }
 
 /* Content */
