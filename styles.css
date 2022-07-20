@@ -32,7 +32,14 @@ h1 {
     -o-transform: skewX(-20deg);
     transform: skewX(-20deg);
     font-size: 65px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
+    background-image: url('./resources/images/textColor.png');
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 10%;
+    background-color: hotpink;
+    filter: drop-shadow(7px 3px 3px purple);
 }
 
 /* Content */
