@@ -18,7 +18,7 @@ colorDropper.oninput = (e) => setColorChoice(e.target.value);
 colorDropper.onclick = () => setModeChoice('color');
 classicButton.onclick = () => setModeChoice('classic');
 eraserButton.onclick = () => setModeChoice('erase');
-resetButton.onclick = () => gridCheck();
+resetButton.onclick = () => resetGrid();
 sizeSlider.onchange = (e) => setSizeChoice(e.target.value);
 sizeSlider.onmousemove = (e) => setSizeValue(e.target.value);
 
@@ -33,24 +33,14 @@ function setModeChoice(modeChoice) {
 
 function setSizeChoice(sizeChoice) {
     currentSize = sizeChoice;
-    gridCheck();
+    resetGrid();
 }
 
 function setSizeValue(value) {
     sizeValue.innerHTML = `${value} x ${value}`;
 }
 
-function gridCheck() {
-    const gridDiv = document.querySelectorAll(".etch-grid > div");
-    let check = gridDiv.some(div => div.style.backgroundColor !== '#faf0fa');
-    if (check) {
-        resetFilledGrid();
-    } else {
-        resetEmptyGrid();
-    }
-}
-
-function resetFilledGrid() {
+function resetGrid() {
     const gridDiv = document.querySelectorAll(".etch-grid > div");
     gridDiv.forEach(div => {
         if (div.style.backgroundColor !== '#faf0fa') {
@@ -64,11 +54,6 @@ function resetFilledGrid() {
     })
 }
 
-function resetEmptyGrid() {
-    etchGrid.innerHTML = '';
-    setNewGrid(currentSize);
-}
-
 function setNewGrid(size) {
     etchGrid.style.gridTemplate = `repeat(${size}, 1fr) / repeat(${size}, 1fr)`;
     for (let i = 0; i < size * size; i++) {
@@ -79,11 +64,9 @@ function setNewGrid(size) {
 }
 
 function colorGrid() {
-
     let pressDown = false;
     document.body.onmousedown = () => (pressDown = true);
     document.body.onmouseup = () => (pressDown = false);
-
     const gridDiv = document.querySelectorAll(".etch-grid > div");
     gridDiv.forEach(div => {
         div.style.opacity = 0;
