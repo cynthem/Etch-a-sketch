@@ -49,19 +49,46 @@ function setNewGrid(size) {
     etchGrid.style.gridTemplate = `repeat(${size}, 1fr) / repeat(${size}, 1fr)`;
     for (let i = 0; i < size * size; i++) {
         const gridDiv = document.createElement('div');
+        gridDiv.classList.add('cell');
         etchGrid.appendChild(gridDiv);
-        gridDiv.addEventListener('mousedown', sketch);
     }
+    colorGrid();
 }
 
-function sketch(e) {
-    if (currentMode === 'classic') {
+function colorGrid() {
 
-    } else if (currentMode === 'color') {
-        e.target.style.backgroundColor = currentColor;
-    } else if (currentMode === 'erase') {
-        e.target.style.backgroundColor = '#faf0fa';
-    }
+    let pressDown = false;
+    document.body.onmousedown = () => (pressDown = true);
+    document.body.onmouseup = () => (pressDown = false);
+
+    let gridDiv = document.querySelectorAll("div.cell");
+    gridDiv.forEach(div => {
+        div.addEventListener('mousedown', (e) => {
+            if (e.type === 'mouseover' && !pressDown) return;
+            if (currentMode === 'classic') {
+                let opacity = Number(div.style.opacity);
+                div.style.opacity = opacity >= 1 ? "1" : opacity + 0.2 + ""; 
+            } else if (currentMode === 'color') {
+                div.style.backgroundColor = currentColor;
+                div.style.opacity = 1;
+            } else if (currentMode === 'erase') {
+                div.style.backgroundColor = '#faf0fa';
+            }
+        })
+        div.addEventListener('mouseover', (e) => {
+            if (e.type === 'mouseover' && !pressDown) return;
+            if (currentMode === 'classic') {
+                let opacity = Number(div.style.opacity);
+                div.style.opacity = opacity >= 1 ? "1" : opacity + 0.2 + ""; 
+            } else if (currentMode === 'color') {
+                div.style.backgroundColor = currentColor;
+                div.style.opacity = 1;
+            } else if (currentMode === 'erase') {
+                div.style.backgroundColor = '#faf0fa';
+            }
+        })
+    })
 }
+
 
 window.onload = () => setNewGrid(defaultSize);
