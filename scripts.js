@@ -51,6 +51,7 @@ function resetGrid() {
     etchGrid.addEventListener('animationend', () => {
         etchGrid.innerHTML = '';
         setNewGrid(currentSize);
+        currentMode = defaultMode;
     })
 }
 
