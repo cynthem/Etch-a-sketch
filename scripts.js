@@ -11,5 +11,6 @@ const sizeValue = document.getElementById('size-value');
 
 
 
-
 // Etch-grid functionality
+
+const etchGrid = document.getElementById('etch-grid');
