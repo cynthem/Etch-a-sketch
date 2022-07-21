@@ -44,8 +44,8 @@ function resetGrid() {
     const gridDiv = document.querySelectorAll(".etch-grid > div");
     gridDiv.forEach(div => {
         if (div.style.backgroundColor !== '#faf0fa') {
-            div.classList.add('.erase-grid');
-            div.addEventListener('animationend', () => div.classList.remove('.erase-grid'));
+            div.classList.add('erase-grid');
+            div.addEventListener('animationend', () => div.classList.remove('erase-grid'));
         }
     })
     etchGrid.addEventListener('animationend', () => {
