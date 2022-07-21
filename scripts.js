@@ -42,5 +42,26 @@ function setSizeValue(value) {
 
 function resetGrid() {
     etchGrid.innerHTML = '';
-    setNewGrid();
+    setNewGrid(currentSize);
 }
+
+function setNewGrid(size) {
+    etchGrid.style.gridTemplate = `repeat(${size}, 1fr) / repeat(${size}, 1fr)`;
+    for (let i = 0; i < size * size; i++) {
+        const gridDiv = document.createElement('div');
+        etchGrid.appendChild(gridDiv);
+        gridDiv.addEventListener('mousedown', sketch);
+    }
+}
+
+function sketch(e) {
+    if (currentMode === 'classic') {
+
+    } else if (currentMode === 'color') {
+        e.target.style.backgroundColor = currentColor;
+    } else if (currentMode === 'erase') {
+        e.target.style.backgroundColor = '#faf0fa';
+    }
+}
+
+window.onload = () => setNewGrid(defaultSize);
