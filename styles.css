@@ -23,9 +23,14 @@ body {
     background: linear-gradient(139deg, rgba(4,0,70,1) 0%, rgba(26,4,45,1) 49%, rgba(45,0,80,1) 100%);
     color: salmon;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 /* Header */
+
+.header {
+    margin-top: -20px;
+}
 
 h1 {
     text-align: center;
@@ -35,7 +40,7 @@ h1 {
     -ms-transform: skewX(-20deg);
     -o-transform: skewX(-20deg);
     transform: skewX(-20deg);
-    font-size: 65px;
+    font-size: 70px;
     letter-spacing: 0.06em;
     background-image: url('./resources/images/textColor.png');
     -webkit-background-clip: text;
@@ -146,6 +151,10 @@ button:active,
     transform: scale(1.7);
 }
 
+.sizing-tool::-webkit-slider-thumb:active {
+    transform: scale(1.1);
+}
+
 .size-value {
     margin-top: -15px;
     color: black;
@@ -158,9 +167,9 @@ button:active,
 
 .etch-grid {
     display: grid;
-    width: 500px;
-    height: 500px;
-    background-color: rgb(250, 232, 246);
+    width: 600px;
+    height: 600px;
+    background-color: rgb(250, 240, 250);
     border-radius: 5px;
     box-shadow: 1px 1px 1px rgb(250, 80, 246), 
                 2px 2px 1px rgb(250, 90, 246),
@@ -171,7 +180,9 @@ button:active,
                 7px 7px 1px rgb(250, 140, 245), 
                 8px 8px 1px rgb(250, 150, 246),
                 9px 9px 1px rgb(250, 160, 245), 
-                10px 10px 1px rgb(250, 180, 246);
+                10px 10px 1px rgb(250, 170, 245), 
+                11px 11px 1px rgb(250, 180, 246),
+                12px 12px 1px rgb(250, 190, 246);
 }
 
 /* Footer */
