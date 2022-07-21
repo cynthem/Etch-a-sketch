@@ -63,7 +63,7 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    width: 200px;
+    width: 220px;
     background-color: lightseagreen;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -84,13 +84,14 @@ button {
     border: 1px solid white;
     border-radius: 5px;
     font-family: 'Audiowide', sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     letter-spacing: 0.05em;
 }
 
 button,
 .color-container {
     transition: transform 0.1s linear;
+    box-shadow: 3px 3px 3px 2px black;
 }
 
 button:hover,
@@ -120,8 +121,32 @@ button:active,
     transform: translate(-25%, -25%);
 }
 
+.sizing-tool {
+    -webkit-appearance: none;
+    margin-top: 20px;
+    transform: scale(1.5);
+    width: 100px;
+    height: 10px;
+    box-shadow: 1.5px 1.5px 1.5px 1px black;
+    border-radius: 5px;
+}
+
+.sizing-tool::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: salmon;
+    border: 1px solid rgb(238, 134, 99);
+    width: 13px;
+    height: 20px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px black;
+}
+
+.sizing-tool:hover {
+    transform: scale(1.7);
+}
+
 .size-value {
-    margin-top: -20px;
+    margin-top: -15px;
     color: black;
     font-family: 'Audiowide', sans-serif;
     font-size: 16px;
