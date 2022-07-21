@@ -26,6 +26,18 @@ body {
     background-size: cover;
 }
 
+@keyframes eraseGrid {
+    0% {transform:translate(5px, 10px); opacity: 0.8;}
+    25% {transform:translate(-5px, 20px); opacity: 0.6;}
+    50% {transform:translate(5px, 30px); opacity: 0.4;}
+    75% {transform:translate(-5px, 40px); opacity: 0.2;}
+    100% {transform:translate(5px, 50px); opacity: 0.1;}
+}
+
+.erase-grid {
+    animation: eraseGrid 1s;
+}
+
 /* Header */
 
 .header {
