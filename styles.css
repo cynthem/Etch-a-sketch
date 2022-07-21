@@ -27,9 +27,9 @@ body {
 }
 
 @keyframes eraseGrid {
-    0% {transform:translate(5px, 10px); opacity: 0.8;}
-    25% {transform:translate(-5px, 20px); opacity: 0.6;}
-    50% {transform:translate(5px, 30px); opacity: 0.4;}
+    0% {transform:translate(5px, 10px); opacity: 0.5;}
+    25% {transform:translate(-5px, 20px); opacity: 0.4;}
+    50% {transform:translate(5px, 30px); opacity: 0.3;}
     75% {transform:translate(-5px, 40px); opacity: 0.2;}
     100% {transform:translate(5px, 50px); opacity: 0.1;}
 }
@@ -181,6 +181,7 @@ button:active,
     display: grid;
     width: 600px;
     height: 600px;
+    overflow: hidden;
     background-color: rgb(250, 240, 250);
     border-radius: 5px;
     box-shadow: 1px 1px 1px rgb(250, 80, 246), 
