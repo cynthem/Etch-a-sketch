@@ -198,6 +198,10 @@ button:active,
                 12px 12px 1px rgb(250, 190, 246);
 }
 
+.grid-div {
+    user-select: none;
+}
+
 /* Footer */
 
 .footer {
