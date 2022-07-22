@@ -6,8 +6,10 @@ Live demo [_here_](https://doozles411.github.io/Etch-a-sketch/).
 To do:
 - Improve layout responsiveness.
 - Format for mobile devices.
-- Improve and add animations.
+- Add an 'undo' option.
 - Consider adding other color and shading features.
+- Change mouse event to be more sensitive.
+- Add grid-resize and reset button warnings.
 
 ## Screenshot
-![etchasketch](https://user-images.githubusercontent.com/96557009/180333449-99e6a4af-b21d-4b50-8c29-73c6282a7c23.png)
+![etchasketch](https://user-images.githubusercontent.com/96557009/180339598-b1f66a5f-1b13-4d61-b6fb-d860d77638f6.png)
