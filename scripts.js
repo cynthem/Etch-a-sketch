@@ -59,6 +59,7 @@ function setNewGrid(size) {
     etchGrid.style.gridTemplate = `repeat(${size}, 1fr) / repeat(${size}, 1fr)`;
     for (let i = 0; i < size * size; i++) {
         const newDiv = document.createElement('div');
+        newDiv.classList.add('grid-div');
         etchGrid.appendChild(newDiv);
     }
     colorGrid();
