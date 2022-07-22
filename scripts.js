@@ -65,10 +65,11 @@ function setNewGrid(size) {
     colorGrid();
 }
 
+let pressDown = false;
+document.body.onmousedown = () => (pressDown = true);
+document.body.onmouseup = () => (pressDown = false);
+
 function colorGrid() {
-    let pressDown = false;
-    document.body.onmousedown = () => (pressDown = true);
-    document.body.onmouseup = () => (pressDown = false);
     const gridDiv = document.querySelectorAll(".etch-grid > div");
     gridDiv.forEach(div => {
         div.style.opacity = 0;
