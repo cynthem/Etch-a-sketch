@@ -1,6 +1,6 @@
 # Etch-a-sketch
 > A web page with a vaporwave Etch-a-Sketch game that uses JavaScript and features some animation. This project was completed as part of The Odin Project's Foundations curriculum.
-Live demo [_here_](https://doozles411.github.io/Etch-a-sketch/).
+Live demo [_here_](https://cynthem.github.io/Etch-a-sketch/).
 
 ## Room for Improvement
 To do:
